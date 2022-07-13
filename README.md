@@ -5,7 +5,7 @@ Repositorio creado para almacenar cheatsheets del proyecto Virtual Forests y con
 
 - Algoritmia: conceptos básicos sobre algoritmia
 - Ciencia_abierta: conceptos básicos sobre la ciencia abierta
-- IFN: información básica acerca de los Inventarios Forestales Nacionales de España, Argentina y Colombia
+- IFN: información básica acerca de los Inventarios Forestales Nacionales de España, Argentina, Colombia y Vietnam
 - LOD_forestal: conceptos básicoa de LOD (datos abiertos enlazados) aplicados al sector forestal
 - R_basico: comandos básicos para iniciarse en el uso de R
 - R_arbol_individual: código de R útil para realizar cálculos a nivel de árbol individual
