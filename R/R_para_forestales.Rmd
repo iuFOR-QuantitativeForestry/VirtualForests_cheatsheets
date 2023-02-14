@@ -44,8 +44,8 @@ Para conocer mejor los campos existentes en ambos archivos se recomienda consult
 
 ```{r carga de datos, echo=TRUE}
 
-parcelas <- read.csv('parcelas_IFN3_ejemplo.csv')
-arboles <- read.csv('arboles_IFN3_ejemplo.csv')
+parcelas <- read.csv('parcelas_IFN3_ejemplo-pinaster.csv')
+arboles <- read.csv('arboles_IFN3_ejemplo-pinaster.csv')
 
 ```
 
