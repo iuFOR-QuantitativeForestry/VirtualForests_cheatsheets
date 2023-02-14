@@ -10,6 +10,13 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+A lo largo de este documento refrescaremos conocimientos de dasometría y R. Para ello
+utilizaremos datos del Inventario Forestal Nacional de España sobre los que calcularemos
+variables de interés forestal. El objetivo será conseguir ampliar la información de 
+nuestras parcelas para que tenga una mayor utilidad a la hora de analizar los datos.
+
+
 ## Consideraciones iniciales
 
 Este script ha sido elaborado en:  
