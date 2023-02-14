@@ -2,7 +2,7 @@
 title: "R_para_forestales"
 author: "Aitor Vázquez Veloso e Irene Ruano Benito"
 date: '2022-06-20'
-output: pdf_document
+output: html_document
 ---
 
 
