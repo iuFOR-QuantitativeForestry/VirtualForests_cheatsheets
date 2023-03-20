@@ -11,7 +11,7 @@
 
 <meta name="author" content="Aitor Vázquez Veloso e Irene Ruano Benito" />
 
-<meta name="date" content="2022-06-20" />
+<meta name="date" content="2023-03-20" />
 
 <title>R_para_forestales</title>
 
@@ -352,7 +352,7 @@ display: none;
 
 <h1 class="title toc-ignore">R_para_forestales</h1>
 <h4 class="author">Aitor Vázquez Veloso e Irene Ruano Benito</h4>
-<h4 class="date">2022-06-20</h4>
+<h4 class="date">2023-03-20</h4>
 
 </div>
 
@@ -442,13 +442,12 @@ arboles$perimetro &lt;- arboles$dbh*pi
 #   *ejemplo con parcela de 1.000 m²*: 
 #   expan = 10.000 / 1.000 = 10 (cada árbol de la parcela equivale a 10 a nivel de ha)
 
-# El caso del IFN es peculiar, dado que se muestrean parcelas concéntricas y, por lo 
-# tanto, el factor de expansión de cada árbol depende de su posición dentro de la 
-# parcela de muestreo.
+# El caso del IFN es peculiar, dado que se muestrean parcelas concéntricas y en cada
+# una de ellas los diámetros mínimos inventariables varían. 
 # Echa un vistazo a las parcelas del IFN en:
 # https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/
 # c3_parcelasdecampo_tcm30-153778.pdf
-# Conociendo esto, se puede calcular el factor de expansión de dos formas:
+# Conociendo esto, se puede calcular el factor de expansión de la siguiente forma:
 
 arboles$expan &lt;- with(arboles, # teniendo en cuenta el diámetro del árbol
                          ifelse (dbh &lt; 7.5, 0, 
@@ -457,12 +456,6 @@ arboles$expan &lt;- with(arboles, # teniendo en cuenta el diámetro del árbol
                                                ifelse(dbh &lt; 42.5, 10000/(pi*(15^2)),
                                                       10000/(pi*(25^2)))))))
 
-arboles$expan &lt;- with(arboles, # teniendo en cuenta la posición del árbol
-                             ifelse(distancia &lt; 5, 10000/(pi*(5^2)), 
-                                    ifelse(distancia &lt; 10, 10000/(pi*(10^2)), 
-                                           ifelse(distancia &lt; 15, 10000/(pi*(15^2)),
-                                                  ifelse(distancia &lt; 25, 10000/(pi*(25^2)),
-                                                         0)))))
 
 # Cálculo del área basimétrica
 arboles$g &lt;- pi*((arboles$dbh/2)**2)  # área basimétrica (cm²)
